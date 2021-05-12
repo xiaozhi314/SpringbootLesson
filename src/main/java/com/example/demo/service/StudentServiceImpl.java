@@ -19,4 +19,9 @@ public class StudentServiceImpl implements StudentService{
 		return studentDao.getAllStudents();
 	}
 
+	@Override
+	public void inserStudent() {
+		studentDao.insertStudent();
+	}
+
 }

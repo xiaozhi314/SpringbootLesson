@@ -10,13 +10,13 @@ import com.example.demo.model.Student;
 import com.example.demo.service.StudentService;
 
 @Controller
-@RequestMapping("/index")
+@RequestMapping("")
 public class StudentController {
 	
 	@Autowired
 	private StudentService studentService;
 	
-	@RequestMapping("")
+	@RequestMapping("/index")
 	public String name() {
 		List<Student> list=studentService.getAllStudents();
 		
@@ -25,5 +25,11 @@ public class StudentController {
 		}
 		return "NewFile";
 	}
-
+	
+	@RequestMapping("/insert")
+	public String insert() {
+		studentService.inserStudent();
+		return "insert";
+	}
+	
 }

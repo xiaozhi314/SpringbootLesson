@@ -22,7 +22,12 @@ public class StudentDaoImpl implements StudentDao{
 		String sql="select id, stu_id, stu_name, gender, age from student;";
 		return jdbcTemplate.query(sql, new StudentRowmapper());
 	}
-
+	
+	@Override
+	public void insertStudent() {
+		String sql="INSERT INTO student VALUES ('4','d','john','male','30');";
+		jdbcTemplate.update(sql);
+	}
 	
 	private class StudentRowmapper implements RowMapper<Student>{
 
@@ -38,5 +43,8 @@ public class StudentDaoImpl implements StudentDao{
 		}
 		
 	}
+
+
+	
 	
 }

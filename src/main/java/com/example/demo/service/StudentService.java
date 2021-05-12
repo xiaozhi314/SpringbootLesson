@@ -7,5 +7,5 @@ import com.example.demo.model.Student;
 public interface StudentService {
 	
 	public List<Student> getAllStudents(); 
-
+	public void inserStudent();
 }
