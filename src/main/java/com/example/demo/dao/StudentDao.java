@@ -6,6 +6,5 @@ import com.example.demo.model.Student;
 
 public interface StudentDao {
 	public List<Student> getAllStudents();
-	public void insertStudent();
-
+	public Student getSingleStudents(String studentName);
 }

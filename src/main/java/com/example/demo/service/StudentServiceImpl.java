@@ -20,8 +20,8 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public void inserStudent() {
-		studentDao.insertStudent();
+	public Student getSingleStudents(String studentName) {
+		return studentDao.getSingleStudents(studentName);
 	}
 
 }
